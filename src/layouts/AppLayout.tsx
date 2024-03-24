@@ -1,8 +1,10 @@
 import { Outlet } from '@tanstack/react-router';
+import { Header } from '../components/Header';
 
 export const AppLayout = () => {
   return (
-    <div className="p-4">
+    <div className="min-h-screen p-4 transition-all dark:bg-black">
+      <Header />
       <Outlet />
     </div>
   );
