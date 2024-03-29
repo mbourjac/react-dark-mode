@@ -1,5 +1,5 @@
-import { ProjectCover } from '../../components/ProjectCover';
-import { PROJECTS } from './Home.constants';
+import { FeaturedProject } from '../../components/FeaturedProject';
+import { FEATURED_PROJECTS } from './Home.constants';
 
 export const ProjectsSection = () => {
   return (
@@ -18,8 +18,8 @@ export const ProjectsSection = () => {
           deleniti eos? Optio rem enim totam ullam fugit delectus.
         </p>
       </div>
-      {PROJECTS.map((project) => (
-        <ProjectCover key={project.id} {...project} />
+      {FEATURED_PROJECTS.map((project) => (
+        <FeaturedProject key={project.id} {...project} />
       ))}
     </section>
   );

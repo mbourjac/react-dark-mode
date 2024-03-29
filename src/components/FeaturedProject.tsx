@@ -1,9 +1,9 @@
 import { Link } from '@tanstack/react-router';
-import type { Project } from '../pages/Home/Home.types';
+import type { FeaturedProject as FeaturedProjectType } from '../pages/Home/Home.types';
 
-type ProjectCoverProps = Project;
+type ProjectCoverProps = FeaturedProjectType;
 
-export const ProjectCover = ({ id, cover, heading }: ProjectCoverProps) => {
+export const FeaturedProject = ({ id, cover, heading }: ProjectCoverProps) => {
   return (
     <Link to={id}>
       <article className="group">
