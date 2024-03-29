@@ -18,10 +18,8 @@ export const ProjectsSection = () => {
           deleniti eos? Optio rem enim totam ullam fugit delectus.
         </p>
       </div>
-      {PROJECTS.map(({ id, heading, cover }) => (
-        <ProjectCover key={id} cover={cover}>
-          {heading}
-        </ProjectCover>
+      {PROJECTS.map((project) => (
+        <ProjectCover key={project.id} {...project} />
       ))}
     </section>
   );

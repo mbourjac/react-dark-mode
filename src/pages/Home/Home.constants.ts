@@ -1,8 +1,9 @@
 import projectOneCover from '../../assets/images/project-1.jpeg';
 import projectTwoCover from '../../assets/images/project-2.jpg';
 import projectThreeCover from '../../assets/images/project-3.jpeg';
+import type { Project } from './Home.types';
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     id: 'facere-quia-numquam-hic',
     heading: 'Facere quia numquam hic',
