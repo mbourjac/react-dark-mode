@@ -4,7 +4,7 @@ export const EyeIcon = () => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-auto w-10 fill-black transition-all dark:fill-white"
+      className="h-auto w-10 fill-current"
     >
       <path
         fillRule="evenodd"
