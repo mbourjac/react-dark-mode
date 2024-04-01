@@ -1,4 +1,5 @@
 import hero from '../../assets/images/hero.jpeg';
+import { Spotlight } from '../../components/Spotlight';
 
 export const Hero = () => {
   return (
@@ -11,13 +12,16 @@ export const Hero = () => {
         enim delectus velit nemo ducimus doloribus cumque at asperiores
         deleniti, consequatur suscipit animi explicabo labore.
       </p>
-      <div className="br-border h-[70vh]">
+      <Spotlight
+        containerClassName="br-border h-[70vh]"
+        gradientClassName="mix-blend-exclusion"
+      >
         <img
           src={hero}
           alt=""
           className="h-full w-full object-cover object-[center_20%]"
         />
-      </div>
+      </Spotlight>
     </section>
   );
 };
