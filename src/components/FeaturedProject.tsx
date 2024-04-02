@@ -9,7 +9,10 @@ export const FeaturedProject = ({ id, cover, heading }: ProjectCoverProps) => {
     <Link to={id}>
       <article className="group/highlight">
         <div className="br-border flex justify-end p-2">
-          <Highlight as="h3" elementClassName="text-4xl font-bold uppercase">
+          <Highlight
+            as="h3"
+            elementClassName="text-[clamp(1.2rem,3.5vw,5rem)] font-bold uppercase leading-none"
+          >
             {heading}
           </Highlight>
         </div>

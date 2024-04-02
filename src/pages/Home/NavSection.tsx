@@ -3,7 +3,7 @@ import { ArrowLink } from '../../components/ArrowLink';
 export const NavSection = () => {
   return (
     <nav>
-      <ul className="text-[clamp(1rem,3.5vw,5rem)] font-bold uppercase leading-none">
+      <ul className="text-[clamp(1.2rem,3.5vw,5rem)] font-bold uppercase leading-none">
         <li className="bl-border p-2">
           <ArrowLink>Aliquid necessitatibus voluptate</ArrowLink>
         </li>
