@@ -1,3 +1,4 @@
+import { ContactSection } from './ContactSection/ContactSection';
 import { Hero } from './Hero';
 import { NavSection } from './NavSection';
 import { ProjectsSection } from './ProjectsSection';
@@ -8,6 +9,7 @@ export const Home = () => {
       <Hero />
       <NavSection />
       <ProjectsSection />
+      <ContactSection />
     </div>
   );
 };
