@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router';
-import { useDarkMode } from '../hooks/use-dark-mode';
-import { EyeIcon } from './EyeIcon';
+import { EyeIcon } from '../../components/EyeIcon';
+import { useDarkMode } from '../../hooks/use-dark-mode';
 
 export const Header = () => {
   const { toggleDarkMode } = useDarkMode();

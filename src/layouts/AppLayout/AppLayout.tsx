@@ -1,5 +1,5 @@
 import { Outlet } from '@tanstack/react-router';
-import { Header } from '../components/Header';
+import { Header } from './Header';
 
 export const AppLayout = () => {
   return (

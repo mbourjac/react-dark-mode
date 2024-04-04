@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link } from '@tanstack/react-router';
-import type { AllRoutes } from '../lib/tanstack-router';
-import { ExpandingArrow } from './ExpandingArrow';
+import { ExpandingArrow } from '../../../components/ExpandingArrow';
+import type { AllRoutes } from '../../../lib/tanstack-router';
 
 type ArrowLinkProps = {
   to?: AllRoutes;

@@ -1,5 +1,5 @@
-import { FeaturedProject } from '../../components/FeaturedProject';
-import { FEATURED_PROJECTS } from './Home.constants';
+import { FEATURED_PROJECTS } from '../Home.constants';
+import { FeaturedProject } from './FeaturedProject';
 
 export const ProjectsSection = () => {
   return (

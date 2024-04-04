@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router';
-import type { FeaturedProject as FeaturedProjectType } from '../pages/Home/Home.types';
-import { Highlight } from './Highlight';
+import { Highlight } from '../../../components/Highlight';
+import type { FeaturedProject as FeaturedProjectType } from '../Home.types';
 
 type ProjectCoverProps = FeaturedProjectType;
 

@@ -1,4 +1,4 @@
-import { ArrowLink } from '../../components/ArrowLink';
+import { ArrowLink } from './ArrowLink';
 
 export const NavSection = () => {
   return (
