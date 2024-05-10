@@ -1,19 +1,11 @@
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 import { ExpandingArrow } from '../../../components/ExpandingArrow';
+import { useZodForm } from '../../../hooks/use-zod-form';
 import { contactSchema } from '../Home.schemas';
 import type { Contact } from '../Home.types';
 import { ContactInput } from './ContactInput';
 
 export const ContactSection = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<Contact>({
-    resolver: zodResolver(contactSchema),
-  });
+  const { handleSubmit, reset, inputProps } = useZodForm(contactSchema);
 
   const onSubmit = async (data: Contact) => {
     await new Promise((resolve) => setTimeout(resolve, 500));
@@ -41,30 +33,22 @@ export const ContactSection = () => {
         Contact
       </h2>
       <form
-        noValidate
         onSubmit={(event) => void handleSubmit(onSubmit)(event)}
         className="flex flex-col"
       >
-        <ContactInput
-          type="text"
-          id="name"
-          label="Your name*"
-          register={register}
-          errorMessage={errors.name?.message?.toString()}
-        />
+        <ContactInput id="name" label="Your name*" {...inputProps} />
         <ContactInput
           type="email"
           id="email"
           label="Your email*"
-          register={register}
-          errorMessage={errors.email?.message?.toString()}
+          {...inputProps}
         />
+        <ContactInput id="phone" label="Your phone" {...inputProps} />
         <ContactInput
           type="textarea"
           id="message"
           label="Your message*"
-          register={register}
-          errorMessage={errors.message?.message?.toString()}
+          {...inputProps}
         />
         <button className="br-border group/arrow inline-flex items-center gap-4 p-2 text-xl font-bold uppercase leading-none sm:text-4xl">
           <ExpandingArrow />

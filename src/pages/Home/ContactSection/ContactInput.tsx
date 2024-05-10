@@ -1,31 +1,40 @@
-import type { UseFormRegister } from 'react-hook-form';
+import type {
+  Path,
+  FormState,
+  UseFormGetFieldState,
+  UseFormRegister,
+} from 'react-hook-form';
 import { cn } from '../../../lib/tailwind';
 import type { Contact } from '../Home.types';
 
 type ContactInputProps = {
-  id: keyof Contact;
-  type: 'text' | 'email' | 'textarea';
+  id: Path<Contact>;
   label: string;
-  errorMessage?: string;
+  type?: 'text' | 'email' | 'textarea';
+  formState: FormState<Contact>;
+  getFieldState: UseFormGetFieldState<Contact>;
   register: UseFormRegister<Contact>;
 };
 
 export const ContactInput = ({
   id,
-  type,
   label,
-  errorMessage,
+  type,
+  formState,
+  getFieldState,
   register,
 }: ContactInputProps) => {
-  const inputAttributes = {
+  const attributes = {
     id,
     type,
+    ...register(id),
     className: cn(
       'w-full p-2 text-xl font-bold focus-visible:bg-primary focus-visible:outline-none dark:bg-black dark:text-white dark:focus-visible:bg-secondary',
       type === 'textarea' && 'block resize-none',
     ),
-    ...register(id),
   };
+  const fieldState = getFieldState(id, formState);
+  const errorMessage = fieldState.error?.message;
 
   return (
     <>
@@ -38,8 +47,8 @@ export const ContactInput = ({
       </label>
       <div className="bl-border">
         {type === 'textarea' ?
-          <textarea rows={5} {...inputAttributes}></textarea>
-        : <input key={id} {...inputAttributes} />}
+          <textarea rows={5} {...attributes}></textarea>
+        : <input key={id} {...attributes} />}
       </div>
     </>
   );
