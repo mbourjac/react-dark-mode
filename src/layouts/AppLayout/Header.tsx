@@ -3,7 +3,7 @@ import { EyeIcon } from '../../components/EyeIcon';
 import { useDarkMode } from '../../hooks/use-dark-mode';
 
 export const Header = () => {
-  const { toggleDarkMode } = useDarkMode();
+  const { toggleDarkMode, isDarkMode } = useDarkMode();
 
   return (
     <header className="sticky top-4 z-10 text-2xl font-semibold uppercase md:text-3xl lg:text-4xl dark:text-white">
@@ -16,6 +16,9 @@ export const Header = () => {
           </nav>
           <button onClick={toggleDarkMode}>
             <EyeIcon />
+            <span className="sr-only">
+              {`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+            </span>
           </button>
         </div>
       </div>

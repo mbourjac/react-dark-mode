@@ -5,6 +5,7 @@ export const EyeIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="h-auto w-10 fill-current"
+      aria-hidden="true"
     >
       <path
         fillRule="evenodd"
